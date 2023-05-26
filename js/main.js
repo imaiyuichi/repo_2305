@@ -62,18 +62,6 @@
 
     console.log(slides);
 
-    // next,prevボタンの表示と非表示
-    const hidden = () => {
-        next.classList.remove('hidden');
-        prev.classList.remove('hidden');
-        if ( currentIndex === 0 ) {
-            prev.classList.add('hidden');
-        } 
-        if ( currentIndex === slides.length -1 ) {
-            next.classList.add('hidden');
-        } 
-    };
-
     // スライドの動作
     const moveSlides = () => {
         const slideWidth = slides[0].clientWidth;
@@ -88,7 +76,6 @@
                 currentIndex = i;
                 moveDots();
                 moveSlides();
-                hidden();
             })
             dots.push(button);
             document.querySelector('nav').appendChild(button);    
@@ -107,19 +94,28 @@
     }
 
     dotsCreate();
-    hidden();
 
     next.addEventListener('click', () => {
         currentIndex++;
-        moveDots();
-        moveSlides();
-        hidden();
+        if( currentIndex >= slides.length ) {
+            currentIndex = 0;
+            moveDots();
+            moveSlides();
+        } else {
+            moveDots();
+            moveSlides();
+        }
     });
 
     prev.addEventListener('click', () => {
         currentIndex--;
-        moveDots();
-        moveSlides();
-        hidden();
+        if( currentIndex <= -1 ) {
+            currentIndex = slides.length -1;
+            moveDots();
+            moveSlides();
+        } else {
+            moveDots();
+            moveSlides();
+        }
     });
 }
