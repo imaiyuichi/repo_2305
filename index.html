@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">JavaScript難しいいいいい</header>
+
+    <!-- モーダル -->
+    <section class="modal">
+        <div class="modal__button js-open">プロフィール</div>
+        <div class="modal__mask js-mask"></div>
+        <div class="modal__contents js-modal__contents">
+            <p class="modal__contents-text">
+                <div class="img">
+                    <img src="img/profile.png" alt="">
+                    30歳になり胃もたれを感じるようになってきましたが、今も昔も好きな食べ物はマックです。
+                </div>
+            </p>
+            <div class="modal__contents-close js-close">閉じる</div>
+        </div>
+    </section>
+
+    <!-- アコーディオン -->
+    <section class="accordion">
+        <p class="accordion__title">クリックしたものが開閉</p>
+        <dl class="accordion__item">
+            <div class="accordion__item-list js-accordion">
+                <dt class="js-accordion-button">Q. テキストテキストテキスト</dt>
+                <dd class="js-accordion-contents">
+                    テキストテキストテキスト
+                </dd>
+            </div>
+            <div class="accordion__item-list js-accordion">
+                <dt class="js-accordion-button">Q. テキストテキストテキスト</dt>
+                <dd class="js-accordion-contents">
+                    テキストテキストテキスト
+                </dd>
+            </div>
+            <div class="accordion__item-list js-accordion">
+                <dt class="js-accordion-button">Q. テキストテキストテキスト</dt>
+                <dd class="js-accordion-contents">
+                    テキストテキストテキスト
+                </dd>
+            </div>
+        </dl>
+        <p class="accordion__title">一つ開いたら他を閉じる</p>
+        <dl class="accordion__item">
+            <div class="accordion__item-list js-accordion02">
+                <dt class="js-accordion-button02">Q. テキストテキストテキスト</dt>
+                <dd class="js-accordion-contents02">
+                    テキストテキストテキスト
+                </dd>
+            </div>
+            <div class="accordion__item-list js-accordion02">
+                <dt class="js-accordion-button02">Q. テキストテキストテキスト</dt>
+                <dd class="js-accordion-contents02">
+                    テキストテキストテキスト
+                </dd>
+            </div>
+            <div class="accordion__item-list js-accordion02">
+                <dt class="js-accordion-button02">Q. テキストテキストテキスト</dt>
+                <dd class="js-accordion-contents02">
+                    テキストテキストテキスト
+                </dd>
+            </div>
+        </dl>
+    </section>
+
+    <!-- スライダー -->
+    <section class="slider">
+        <div class="slider__container">
+            <ul>
+                <li><img src="img/a.png" alt=""></li>
+                <li><img src="img/b.png" alt=""></li>
+                <li><img src="img/c.png" alt=""></li>
+            </ul>
+            <button class="prev">&laquo;</button>
+            <button class="next">&raquo;</button>
+
+        </div>
+        <nav></nav>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
