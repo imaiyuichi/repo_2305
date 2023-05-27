@@ -54,9 +54,9 @@
 {
     const next = document.querySelector('.next');
     const prev = document.querySelector('.prev');
-    const ul = document.querySelector('ul');
+    const ul = document.querySelector('.js-slider');
     // const slides = ul.children;
-    const slides = document.querySelectorAll('li')
+    const slides = document.querySelectorAll('.js-slider-slid')
     const dots = [];
     let currentIndex = 0;
 
@@ -117,5 +117,23 @@
             moveDots();
             moveSlides();
         }
+    });
+}
+
+// タブメニュー
+{
+    const tab = document.querySelectorAll('.js-tab');
+    const tabContent = document.querySelectorAll('.js-content');
+    tab.forEach(clicked => {
+        clicked.addEventListener('click',() => {
+            tab.forEach(item => {
+                item.classList.remove('tab__active');
+            });
+            clicked.classList.add('tab__active');
+            tabContent.forEach(item => { 
+                item.classList.remove('tab__active');
+            })
+            document.getElementById(clicked.dataset.id).classList.add('tab__active');
+        })
     });
 }

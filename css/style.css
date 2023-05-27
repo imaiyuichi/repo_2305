@@ -3,6 +3,21 @@ body {
     margin: 100px auto;
 }
 
+ul,li {
+    list-style: none;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+div,p,ul,li,dl,dt,dd{
+    padding: 0;
+    margin: 0;
+}
+
+
 .header {
     padding: 50px 0;
     font-size: 30px;
@@ -76,6 +91,10 @@ body {
     font-size: 30px;
     padding: 0 0 10px;
     border-bottom: 1px solid #000;
+}
+
+.accordion__title-02 {
+    margin: 50px 0 0;
 }
 
 .accordion__item-list + .accordion__item-list {
@@ -158,7 +177,7 @@ body {
     overflow: hidden;
 }
 
-ul {
+.js-slider {
     display: flex;
     height: 100%;
     list-style: none;
@@ -167,7 +186,7 @@ ul {
     transition: transform 0.3s;
 }
 
-li {
+.js-slider-slid {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -229,3 +248,48 @@ button + button {
 .dots {
     background: #999;
 }
+
+
+/* タブメニュー */
+.tab {
+    width: 500px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.tab__menu {
+    display: flex;
+    justify-content: center;
+}
+
+.tab__menu-item {
+    width: 150px;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.tab__menu-item + .tab__menu-item {
+    margin: 0 0 0 -1px;
+}
+
+.tab__menu-item-link {
+    display: block;
+}
+
+.tab__content-item {
+    display: none;
+    padding: 50px 30px;
+}
+
+.tab__menu-item:not(.tab__active):hover {
+    opacity: 0.5;
+    transition: opacity 0.4s;
+}
+
+.tab__active {
+    display: block;
+    background: #333;
+    color: #fff;
+}
+

@@ -9,7 +9,7 @@
 </head>
 <body>
     <header class="header">JavaScript難しいいいいい</header>
-
+    
     <!-- モーダル -->
     <section class="modal">
         <div class="modal__button js-open">プロフィール</div>
@@ -48,7 +48,7 @@
                 </dd>
             </div>
         </dl>
-        <p class="accordion__title">一つ開いたら他を閉じる</p>
+        <p class="accordion__title accordion__title-02">一つ開いたら他を閉じる</p>
         <dl class="accordion__item">
             <div class="accordion__item-list js-accordion02">
                 <dt class="js-accordion-button02">Q. テキストテキストテキスト</dt>
@@ -71,19 +71,32 @@
         </dl>
     </section>
 
+    <!-- タブメニュー -->
+    <section class="tab">
+        <ul class="tab__menu">
+            <li class="tab__menu-item js-tab tab__active" data-id="about">タブ1</li>
+            <li class="tab__menu-item js-tab" data-id="servise">タブ2</li>
+            <li class="tab__menu-item js-tab" data-id="contact">タブ3</li>
+        </ul>
+        <ul class="tab__content">
+            <li class="tab__content-item js-content tab__active" id="about">タブの概要。タブの概要。タブの概要。タブの概要。タブの概要。タブの概要。タブの概要。タブの概要。</li>
+            <li class="tab__content-item js-content" id="servise">サービスの内容。サービスの内容。サービスの内容。サービスの内容。サービスの内容。サービスの内容。サービスの内容。</li>
+            <li class="tab__content-item js-content" id="contact">コンタクトの内容。コンタクトの内容。コンタクトの内容。コンタクトの内容。コンタクトの内容。コンタクトの内容。</li>
+        </ul>
+    </section>    
+
     <!-- スライダー -->
     <section class="slider">
         <div class="slider__container">
-            <ul>
-                <li>test01</li>
-                <li>test02</li>
-                <li>test03</li>
-                <li>test04</li>
-                <li>test05</li>
+            <ul class="js-slider">
+                <li class="js-slider-slid">test01</li>
+                <li class="js-slider-slid">test02</li>
+                <li class="js-slider-slid">test03</li>
+                <li class="js-slider-slid">test04</li>
+                <li class="js-slider-slid">test05</li>
             </ul>
             <button class="prev">&laquo;</button>
             <button class="next">&raquo;</button>
-
         </div>
         <nav></nav>
     </section>
