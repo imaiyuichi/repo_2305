@@ -1,6 +1,6 @@
 body {
     width: 1000px;
-    margin: 100px auto;
+    margin: auto;
 }
 
 ul,li {
@@ -173,7 +173,6 @@ div,p,ul,li,dl,dt,dd{
 /* スライダー */
 .slider {
     position: relative;
-    margin: 100px 0 0;
 }
 
 .slider__container {
