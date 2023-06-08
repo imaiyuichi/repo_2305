@@ -8,7 +8,23 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">JavaScript難しいいいいい</header>
+    <header class="header">JavaScript頑張ってみた</header>
+
+    <!-- スライダー -->
+    <section class="slider">
+        <div class="slider__container">
+            <ul class="js-slider">
+                <li class="js-slider-slid"><img src="img/test01.webp" alt=""></li>
+                <li class="js-slider-slid"><img src="img/test02.webp" alt=""></li>
+                <li class="js-slider-slid"><img src="img/test03.webp" alt=""></li>
+                <li class="js-slider-slid"><img src="img/test04.webp" alt=""></li>
+                <li class="js-slider-slid"><img src="img/test05.webp" alt=""></li>
+            </ul>
+            <button class="prev"></button>
+            <button class="next"></button>
+        </div>
+        <nav></nav>
+    </section>
     
     <!-- モーダル -->
     <section class="modal">
@@ -18,7 +34,6 @@
             <p class="modal__contents-text">
                 <div class="img">
                     <img src="img/profile.png" alt="">
-                    30歳になり胃もたれを感じるようになってきましたが、今も昔も好きな食べ物はマックです。
                 </div>
             </p>
             <div class="modal__contents-close js-close">閉じる</div>
@@ -27,7 +42,6 @@
 
     <!-- アコーディオン -->
     <section class="accordion">
-        <p class="accordion__title">クリックしたものが開閉</p>
         <dl class="accordion__item">
             <div class="accordion__item-list js-accordion">
                 <dt class="js-accordion-button">Q. テキストテキストテキスト</dt>
@@ -44,27 +58,6 @@
             <div class="accordion__item-list js-accordion">
                 <dt class="js-accordion-button">Q. テキストテキストテキスト</dt>
                 <dd class="js-accordion-contents">
-                    テキストテキストテキスト
-                </dd>
-            </div>
-        </dl>
-        <p class="accordion__title accordion__title-02">一つ開いたら他を閉じる</p>
-        <dl class="accordion__item">
-            <div class="accordion__item-list js-accordion02">
-                <dt class="js-accordion-button02">Q. テキストテキストテキスト</dt>
-                <dd class="js-accordion-contents02">
-                    テキストテキストテキスト
-                </dd>
-            </div>
-            <div class="accordion__item-list js-accordion02">
-                <dt class="js-accordion-button02">Q. テキストテキストテキスト</dt>
-                <dd class="js-accordion-contents02">
-                    テキストテキストテキスト
-                </dd>
-            </div>
-            <div class="accordion__item-list js-accordion02">
-                <dt class="js-accordion-button02">Q. テキストテキストテキスト</dt>
-                <dd class="js-accordion-contents02">
                     テキストテキストテキスト
                 </dd>
             </div>
@@ -74,33 +67,23 @@
     <!-- タブメニュー -->
     <section class="tab">
         <ul class="tab__menu">
-            <li class="tab__menu-item js-tab tab__active" data-id="about">タブ1</li>
-            <li class="tab__menu-item js-tab" data-id="servise">タブ2</li>
-            <li class="tab__menu-item js-tab" data-id="contact">タブ3</li>
+            <li class="tab__menu-item js-tab tab__active" data-id="test01">タブ1</li>
+            <li class="tab__menu-item js-tab" data-id="test02">タブ2</li>
+            <li class="tab__menu-item js-tab" data-id="test03">タブ3</li>
         </ul>
         <ul class="tab__content">
-            <li class="tab__content-item js-content tab__active" id="about">タブの概要。タブの概要。タブの概要。タブの概要。タブの概要。タブの概要。タブの概要。タブの概要。</li>
-            <li class="tab__content-item js-content" id="servise">サービスの内容。サービスの内容。サービスの内容。サービスの内容。サービスの内容。サービスの内容。サービスの内容。</li>
-            <li class="tab__content-item js-content" id="contact">コンタクトの内容。コンタクトの内容。コンタクトの内容。コンタクトの内容。コンタクトの内容。コンタクトの内容。</li>
+            <li class="tab__content-item js-content tab__active" id="test01"><img src="img/test01.webp" alt=""></li>
+            <li class="tab__content-item js-content" id="test02"><img src="img/test02.webp" alt=""></li>
+            <li class="tab__content-item js-content" id="test03"><img src="img/test03.webp" alt=""></li>
         </ul>
     </section>    
 
-    <!-- スライダー -->
-    <section class="slider">
-        <div class="slider__container">
-            <ul class="js-slider">
-                <li class="js-slider-slid">test01</li>
-                <li class="js-slider-slid">test02</li>
-                <li class="js-slider-slid">test03</li>
-                <li class="js-slider-slid">test04</li>
-                <li class="js-slider-slid">test05</li>
-            </ul>
-            <button class="prev">&laquo;</button>
-            <button class="next">&raquo;</button>
-        </div>
-        <nav></nav>
-    </section>
+
 
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/tab.js"></script>
 </body>
 </html>
