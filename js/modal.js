@@ -6,18 +6,17 @@ const close = document.querySelector('.js-close');
 const body = document.querySelector('body');
 
 open.addEventListener('click', () => {    
-    mask.classList.add('modal-active');
-    modal.classList.add('modal-active');
-    body.classList.add('modal-active');
-});
+    mask.classList.add('modal-active')
+    modal.classList.add('modal-active')
+    body.classList.add('modal-active')
+})
 
 close.addEventListener('click', () => {    
-    mask.classList.remove('modal-active');
-    modal.classList.remove('modal-active');
-    body.classList.remove('modal-active');
-});
+    mask.classList.remove('modal-active')
+    modal.classList.remove('modal-active')
+    body.classList.remove('modal-active')
+})
 
 mask.addEventListener('click', () => {    
-    close.click();
-});
-
+    close.click()
+})

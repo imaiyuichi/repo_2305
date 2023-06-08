@@ -172,6 +172,7 @@ div,p,ul,li,dl,dt,dd{
 
 /* スライダー */
 .slider {
+    position: relative;
     margin: 100px 0 0;
 }
 
@@ -215,18 +216,17 @@ img {
     transform: translateY(-50%);
     width: 35px;
     height: 35px;
-    background: #fff;
+    background: #000;
     opacity: 0.8;
     font-size: 24px;
-    border: none;
 }
 
 .prev {
-    left: 0;
+    left: 40px;
 }
 
 .next {
-    right: 0;
+    right: 40px;
 }
 
 .hidden {
