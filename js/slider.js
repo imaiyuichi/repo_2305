@@ -1,9 +1,9 @@
 // スライダー
 
-const slideContent = document.querySelector('.slider__container');
+const slideContainer = document.querySelector('.slider__container');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
-const ul = document.querySelector('.js-slider');
+const slideList = document.querySelector('.js-slider');
 const slides = document.querySelectorAll('.js-slider-slid');
 const dotsContainer = document.querySelector('nav');
 const dots = [];
@@ -14,7 +14,8 @@ let isIntersecting = false;
 // スライドの動作
 const moveSlides = () => {
   const slideWidth = slides[0].clientWidth;
-  ul.style.transform = `translateX(${-slideWidth * currentIndex}px)`
+  slideList.style.transform = `translateX(${-slideWidth * currentIndex}px)`
+  
 };
 
 // dotsボタンを動的に生成
@@ -109,4 +110,4 @@ const options = {
 };
 
 const observer = new IntersectionObserver(callback, options)
-observer.observe(slideContent)
+observer.observe(slideContainer)
