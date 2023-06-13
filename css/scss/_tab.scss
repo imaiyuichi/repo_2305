@@ -1,0 +1,50 @@
+/* タブメニュー */
+.tab {
+    width: 700px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+
+.tab__menu {
+    display: flex;
+    justify-content: center;
+}
+
+.tab__menu-item {
+    width: 150px;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.tab__menu-item + .tab__menu-item {
+    margin: 0 0 0 -1px;
+}
+
+.tab__menu-item-link {
+    display: block;
+}
+
+.tab__content {
+    width: 700px;
+    height: 400px;
+}
+
+.tab__content-item {
+    display: none;
+    width: 100%;
+    height: 100%;
+    padding: 10px 10px;
+}
+
+.tab__menu-item:not(.tab__active):hover {
+    opacity: 0.5;
+    transition: opacity 0.4s;
+}
+
+.tab__active {
+    display: block;
+    background: #333;
+    color: #fff;
+}
+

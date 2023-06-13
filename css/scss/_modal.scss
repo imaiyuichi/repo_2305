@@ -1,0 +1,64 @@
+/* モーダル */
+
+.modal {
+    padding: 100px 0;
+}
+
+.modal__button {
+    width: 300px;
+    padding: 20px 0;
+    margin: auto;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 50px;
+    transition: .3s cubic-bezier(0.5, 1, 0.89, 1);
+    background: #ff701e;
+    color: #fff;
+}
+
+.modal__button:hover {
+    background: #fff;
+    color: #ff701e;
+    border: 2px solid #ff701e;
+    letter-spacing: 0.15em;
+}
+
+.modal__mask {
+    display: none;
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    background: #000;
+    opacity: 0.5;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal__contents {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 500px;
+    padding: 30px 50px;
+    text-align: center;
+}
+
+.modal__contents-close {
+    width: 200px;
+    margin: 30px auto 0;
+    border: 1px solid #000;
+}
+
+.modal__contents-close:hover {
+    opacity: 0.8;
+}
+
+.modal-active {
+    display: block;
+    overflow: hidden;
+}

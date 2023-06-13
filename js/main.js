@@ -1,9 +1,11 @@
-import { initializeAccordion } from './accordion.js';
-import { initializeModal } from './modal.js';
-import { initializeSlider } from './slider.js';
-import { initializeTab } from './tab.js';
+import { initializeAccordion } from './component/accordion.js';
+import { initializeModal } from './component/modal.js';
+import { initializeSlider } from './component/slider.js';
+import { initializeTab } from './component/tab.js';
+import { initializeCanvas } from './component/canvas.js';
 
 initializeAccordion()
 initializeModal()
 initializeSlider()
 initializeTab()
+initializeCanvas()
