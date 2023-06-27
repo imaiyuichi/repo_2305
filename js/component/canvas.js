@@ -2,48 +2,51 @@
 
 export function initializeCanvas () {
 
-    function draw() {
-        const canvas = document.querySelector('canvas')
-        // コンテクストを取得
-        const ctx = canvas.getContext('2d')
+    class Icon {
+        constructor(canvas) {
+            this.ctx = canvas.getContext('2d')
+            this.width = canvas.width
+            this.height = canvas.height
+            this.r = 60
+            this.angle = 0
+        }
 
-        // メソットを使用しながら描画していく
-        // ctx.fillRect(x, y, width, height)
-        // ctx.fillStyle = 'pink'
-        // ctx.strokeStyle = 'red'
-        // ctx.lineWidth = 8;
-        // ctx.lineJoin = 'bevel'
-        // ctx.fillRect(50, 50, 100, 100)
-        // ctx.strokeRect(50, 50, 100, 100)
+        draw() {
+            this.ctx.fillStyle = 'rgba(255, 255, 255, 0.3)'
+            this.ctx.fillRect(0, 0, this.width, this.height)
+            this.ctx.save()
+            this.ctx.translate(this.width / 2, this.height / 2);
+            this.ctx.rotate( Math.PI / 180 * this.angle )
+      
+            this.ctx.beginPath();
+            this.ctx.moveTo(0, -this.r - 5);
+            this.ctx.lineTo(0, -this.r + 5);
+            this.ctx.strokeStyle = 'orange';
+            this.ctx.lineWidth = 6;
+            this.ctx.stroke();
 
-        // ctx.fillStyle = 'skyblue'
-        // ctx.strokeStyle = 'blue'
-        // ctx.fillRect(100, 100, 100, 100)
-        // ctx.strokeRect(100, 100, 100, 100)
+            this.ctx.restore()
+        }
 
+        update() {
+            this.angle += 12
 
-        // ctx.createConicGradient(x0, y0, 1x, 1y)
-        // const g = ctx.createLinearGradient(0, 0, canvas.width, 0)
-        // const g = ctx.createRadialGradient(
-        //     canvas.width / 2, canvas.height /2, 50,
-        //     canvas.width / 2, canvas.height / 2, 500,
-        // )
+        }
 
-        // g.addColorStop(0, '#f00')
-        // g.addColorStop(0.5, '#0f0')
-        // g.addColorStop(1, '#00f')
+        run() {
+            this.update()
+            this.draw()
 
-        // ctx.fillStyle = g
-        // ctx.fillRect(0, 0, canvas.width, canvas.height)
-        ctx.shadowOffsetX = 16
-        ctx.shadowOffsetY = 16
-        ctx.shadowBlur = 16
-        ctx.shadowColor = 'rgb(0, 0, 0, 0.3)'
-        ctx.fillRect(50, 50, 100, 100)
-        
+            setTimeout(() => {
+                this.run()
+                console.log('発火')
+            },100)
+
+        }
     }
 
-    draw()
-
+    const canvas = document.querySelector('canvas')
+    const icon = new Icon(canvas)
+    icon.run()
 }
 
